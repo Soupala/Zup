@@ -1,4 +1,4 @@
-Questions = new Meteor.Collection("ideas");
+Ideas = new Meteor.Collection("ideas");
 
 Meteor.startup(function () {
     // code to run on server at startup
