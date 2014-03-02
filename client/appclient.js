@@ -1,10 +1,10 @@
 Ideas = new Meteor.Collection("ideas");
   
 Template.addidea.events({
-    'click input.add-idea' : function(event){
+    'click input.addidea' : function(event){
         event.preventDefault();
         var ideaText = document.getElementById("ideaText").value;
-        Meteor.call("addIdea",ideaText,function(error , ideaId){
+        Meteor.call("addidea",ideaText,function(error , ideaId){
           console.log('added idea with Id .. '+ideaId);
         });
         document.getElementById("questionText").value = "";
