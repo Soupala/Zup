@@ -1,4 +1,6 @@
 Ideas = new Meteor.Collection("ideas");
+
+var addidea;
   
 Template.addidea.events({
     'click input.add-idea' : function(event){
