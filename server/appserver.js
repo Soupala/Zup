@@ -7,7 +7,7 @@ Meteor.startup(function () {
 Meteor.methods({
   addIdea : function(ideaText){
     console.log('Adding Idea');
-    var ideaId = Idea.insert({
+    var ideaId = Ideas.insert({
           'ideaText' : ideaText,
           'submittedOn': new Date(),
           'submittedBy' : Meteor.userId()
