@@ -1,5 +1,5 @@
 Ideas = new Meteor.Collection("ideas");
-  
+
 Template.addidea.events({
     'click input.add-idea' : function(event){
         event.preventDefault();
@@ -13,24 +13,23 @@ Template.addidea.events({
 });
 
 Template.idea.events({
-	'click': function () {
-    	Session.set("selected_question", this._id);
-    },
-
     'click a.yes' : function (event) {
       event.preventDefault();
       if(Meteor.userId()){
-        var ideaId = Session.get('selected_idea');
+        var ideaId = this._id;
+        //console.log(this); You can use this to see what objects you can access from the current context,
+        //including data used to render the template this event is being fired inside.
+
         console.log('updating yes count for ideaId '+ideaId);
         Meteor.call("incrementYesVotes",ideaId);
-        
+
       }
-      
+
     },
     'click a.no': function(){
       event.preventDefault();
       if(Meteor.userId()){
-        var ideaId = Session.get('selected_idea');
+        var ideaId = this._id;
         console.log('updating no count for ideaId '+ideaId);
         Meteor.call("incrementNoVotes",ideaId);
       }
