@@ -1,13 +1,13 @@
 Ideas = new Meteor.Collection("ideas");
   
-Template.idea.events({
+Template.addidea.events({
     'click input.add-idea' : function(event){
         event.preventDefault();
         var ideaText = document.getElementById("ideaText").value;
         Meteor.call("addIdea",ideaText,function(error , ideaId){
           console.log('added idea with Id .. '+ideaId);
         });
-        document.getElementById("questionText").value = "";
+        document.getElementById("ideaText").value = "";
 
     }
 });
