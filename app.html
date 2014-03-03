@@ -5,18 +5,16 @@
 
 <body>
 
-	<div class="navbar navbar-static-top navbar-inverse">
+<div class="navbar navbar-static-top navbar-inverse">
     
       <div class="navbar-inner">
         <div class="container">
           <a class="brand" href="/">Zup: Idea Prioritization for Groups</a>
-          <ul class="nav pull-right btn btn-primary" style="right:10%;">
-            <li>
-              {{loginButtons}}
-            </li>
+          <ul class="nav">
+		<li>{{loginButtons}}</li>
           </ul>
-        </div>
-      </div>
+	</div>
+      </div>	
     
 </div>
 
@@ -42,7 +40,7 @@
 		</div>
 	</div>
 </template>
-<template name="addquestion">
+<template name="addidea">
   
   <textarea rows="3" class="input-xxlarge" name="questionText" id="questionText" placeholder="Add Your Idea"></textarea>
   <br/>

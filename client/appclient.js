@@ -1,10 +1,10 @@
 Ideas = new Meteor.Collection("ideas");
   
-Template.addidea.events({
-    'click input.addidea' : function(event){
+Template.idea.events({
+    'click input.add-idea' : function(event){
         event.preventDefault();
         var ideaText = document.getElementById("ideaText").value;
-        Meteor.call("addidea",ideaText,function(error , ideaId){
+        Meteor.call("addIdea",ideaText,function(error , ideaId){
           console.log('added idea with Id .. '+ideaId);
         });
         document.getElementById("questionText").value = "";
@@ -12,7 +12,7 @@ Template.addidea.events({
     }
 });
 
-Template.question.events({
+Template.idea.events({
 	'click': function () {
     	Session.set("selected_question", this._id);
     },

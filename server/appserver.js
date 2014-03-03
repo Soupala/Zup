@@ -5,7 +5,7 @@ Meteor.startup(function () {
 });
 
 Meteor.methods({
-  addQuestion : function(ideaText){
+  addIdea : function(ideaText){
     console.log('Adding Idea');
     var ideaId = Idea.insert({
           'ideaText' : ideaText,
