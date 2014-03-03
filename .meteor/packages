@@ -6,6 +6,10 @@
 standard-app-packages
 preserve-inputs
 accounts-ui
-accounts-twitter
+accounts-password
+accounts-google
+accounts-meetup
+accounts-github
 bootstrap
 autopublish
+
